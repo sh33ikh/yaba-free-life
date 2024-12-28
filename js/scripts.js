@@ -1,3 +1,25 @@
+// Store the last scroll position
+let lastScrollTop = 0;
+
+// Detect the scroll event
+window.addEventListener('scroll', function() {
+    let mainNav = document.getElementById('main-nav');
+    let container = document.querySelector('.container');
+
+    // Check the scroll position
+    if (window.pageYOffset > lastScrollTop) {
+        // User is scrolling down, hide the navigation and container
+        mainNav.classList.add('hidden');
+        container.classList.add('hidden');
+    } else {
+        // User is scrolling up, show the navigation and container
+        mainNav.classList.remove('hidden');
+        container.classList.remove('hidden');
+    }
+
+    // Update the last scroll position
+    lastScrollTop = window.pageYOffset <= 0 ? 0 : window.pageYOffset;
+});
 document.addEventListener('DOMContentLoaded', function() {
     const updateProgressBtn = document.getElementById('update-progress');
     const sobrietyDaysInput = document.getElementById('sobriety-days');

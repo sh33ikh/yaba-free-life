@@ -1,0 +1,321 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans Bengali', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Typography */
+h1, h2, h3 {
+    margin-bottom: 20px;
+    color: #1e3c72;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* Header styles */
+header {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    color: white;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Navigation styles */
+nav {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 15px 0;
+}
+
+nav ul li {
+    margin: 5px 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #1e3c72;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #fff;
+    background-color: #1e3c72;
+}
+
+/* Section styles */
+section {
+    padding: 60px 0;
+    background-color: #fff;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Emergency box styles */
+.emergency-box {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.emergency-box p {
+    margin-bottom: 10px;
+}
+
+/* Grid layouts */
+.symptom-grid,
+.routine-grid,
+.nutrition-grid,
+.mental-health-grid,
+.coping-grid,
+.relapse-grid,
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.symptom-card,
+.routine-card,
+.nutrition-card,
+.mental-health-card,
+.coping-card,
+.relapse-card,
+.resource-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.symptom-card:hover,
+.routine-card:hover,
+.nutrition-card:hover,
+.mental-health-card:hover,
+.coping-card:hover,
+.relapse-card:hover,
+.resource-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Timeline styles */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #1e3c72;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #1e3c72;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-item:nth-child(odd)::after {
+    left: -16px;
+}
+
+/* Success stories styles */
+.story-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.story-card {
+    flex: 0 0 300px;
+    margin-right: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    scroll-snap-align: start;
+}
+
+/* FAQ styles */
+.faq-accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.faq-item h3 {
+    padding: 15px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    margin: 0;
+}
+
+.faq-item p {
+    padding: 15px;
+    display: none;
+}
+
+/* Progress tracker styles */
+.progress-tracker {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.progress-bar-container {
+    margin-bottom: 20px;
+}
+
+.progress {
+    height: 25px;
+    background-color: #e9ecef;
+    border-radius: 12.5px;
+    margin-top: 10px;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #1e3c72;
+    border-radius: 12.5px;
+    transition: width 0.5s ease;
+    color: white;
+    text-align: center;
+    line-height: 25px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #1e3c72;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 60px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .timeline::after {
+        left: 31px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .timeline-item::after {
+        left: 15px;
+    }
+
+    .timeline-item:nth-child(even) {
+        left: 0%;
+    }
+
+    .story-slider {
+        flex-direction: column;
+    }
+
+    .story-card {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}

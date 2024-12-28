@@ -10,7 +10,6 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #f4f4f4;
-    overflow-x: hidden;
 }
 
 .container {
@@ -24,7 +23,6 @@ body {
 h1, h2, h3 {
     margin-bottom: 20px;
     color: #1e3c72;
-    font-weight: 600;
 }
 
 h1 {
@@ -41,8 +39,6 @@ h3 {
 
 p {
     margin-bottom: 15px;
-    font-size: 1rem;
-    color: #555;
 }
 
 /* Header styles */
@@ -51,12 +47,11 @@ header {
     color: white;
     padding: 60px 0;
     text-align: center;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
     margin-bottom: 10px;
-    font-size: 2.8rem;
+    color: white;
 }
 
 .tagline {
@@ -67,11 +62,10 @@ header h1 {
 /* Navigation styles */
 nav {
     background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
-    transition: background-color 0.3s ease;
 }
 
 nav ul {
@@ -89,12 +83,10 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #1e3c72;
-    font-weight: 600;
+    font-weight: bold;
     transition: color 0.3s ease;
-    padding: 10px 20px;
+    padding: 5px 10px;
     border-radius: 20px;
-    display: block;
-    text-align: center;
 }
 
 nav ul li a:hover, nav ul li a.active {
@@ -108,7 +100,7 @@ section {
     background-color: #fff;
     margin-bottom: 30px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 /* Emergency box styles */
@@ -119,7 +111,6 @@ section {
     border-radius: 8px;
     margin-bottom: 30px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .emergency-box p {
@@ -149,8 +140,8 @@ section {
     background-color: #f9f9f9;
     border-radius: 8px;
     padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
 
 .symptom-card:hover,
@@ -161,7 +152,6 @@ section {
 .relapse-card:hover,
 .resource-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Timeline styles */
@@ -169,7 +159,6 @@ section {
     position: relative;
     max-width: 800px;
     margin: 0 auto;
-    padding: 10px 0;
 }
 
 .timeline::after {
@@ -188,7 +177,6 @@ section {
     position: relative;
     background-color: inherit;
     width: 50%;
-    transition: all 0.3s ease;
 }
 
 .timeline-item::after {
@@ -212,10 +200,6 @@ section {
     left: -16px;
 }
 
-.timeline-item:hover {
-    background-color: #f1f1f1;
-}
-
 /* Success stories styles */
 .story-slider {
     display: flex;
@@ -230,13 +214,8 @@ section {
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     scroll-snap-align: start;
-    transition: transform 0.3s ease;
-}
-
-.story-card:hover {
-    transform: translateY(-5px);
 }
 
 /* FAQ styles */
@@ -257,12 +236,6 @@ section {
     background-color: #f9f9f9;
     cursor: pointer;
     margin: 0;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-}
-
-.faq-item h3:hover {
-    background-color: #e9ecef;
 }
 
 .faq-item p {
@@ -275,7 +248,7 @@ section {
     background-color: #f9f9f9;
     border-radius: 8px;
     padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .progress-bar-container {
@@ -344,25 +317,5 @@ footer {
     .story-card {
         margin-right: 0;
         margin-bottom: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    body {
-        font-size: 14px;
-    }
-
-    header h1 {
-        font-size: 2.2rem;
-    }
-
-    nav ul li a {
-        font-size: 1rem;
-        padding: 8px 16px;
-    }
-
-    .container {
-        width: 100%;
-        padding: 0 10px;
     }
 }
